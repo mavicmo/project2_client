@@ -1,6 +1,6 @@
 /* Recipes Script File */
 
-const BASE_URL = process.env.BASE_URL || process.env.BASE_URL_DEV;
+const BASE_URL = "https://recipescollection.herokuapp.com/";
 
 ///////////////////////////////////////////////////////////////////////////////////////
 /* initialize the variables */
