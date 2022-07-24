@@ -1,5 +1,7 @@
 /* Recipes Script File */
 
+const BASE_URL = process.env.BASE_URL || process.env.BASE_URL_DEV;
+
 ///////////////////////////////////////////////////////////////////////////////////////
 /* initialize the variables */
 const addRecipe = document.querySelector(".addRecipe");
