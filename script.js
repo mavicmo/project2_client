@@ -90,7 +90,7 @@ function editFunction(recipe) {
 }
 
 function searchFunction(resp) {
-  axios.get("http://localhost:3005/recipes").then((resp) => {
+  axios.get(BASE_URL + "recipes").then((resp) => {
     let searchRecipes = resp.data;
 
     //filter method to search
@@ -114,7 +114,7 @@ addRecipe.addEventListener("click", (e) => {
   const link = document.querySelector("#link").value;
 
   axios
-    .post("http://localhost:3005/recipes", {
+    .post(BASE_URL + "recipes", {
       name,
       img,
       link,
@@ -136,7 +136,7 @@ editSubmit.addEventListener("click", (e) => {
   const img = document.querySelector("#imgEdit").value;
   const link = document.querySelector("#linkEdit").value;
   axios
-    .put(`http://localhost:3005/recipes/${editing}`, {
+    .put(BASE_URL + `recipes/${editing}`, {
       name,
       img,
       link,
@@ -150,7 +150,7 @@ editSubmit.addEventListener("click", (e) => {
 });
 
 deleteRecipe.addEventListener("click", (e) => {
-  axios.delete(`http://localhost:3005/recipes/${editing}`).then((resp) => {
+  axios.delete(BASE_URL + `recipes/${editing}`).then((resp) => {
     addFunction(resp.data);
   });
 });
